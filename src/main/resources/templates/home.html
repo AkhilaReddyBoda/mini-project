@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Success</title>
+<link rel="stylesheet" type="text/css" href="drop_down_menu.css" />
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+<body style="background: url(image/bank.jpg)">
+	<div class="container text-center">
+		<h6>Login successfully!</h6>
+	</div>
+	<div class="menu-bar">
+		<ul>
+			<li class="active"><a href="#">My Account</a>
+				<div class="sub-menu-1">
+					<ul>
+						<li><a th:href="@{/viewprofile}">View Profile</a></li>
+
+
+
+					</ul>
+
+				</div></li>
+			<li><a href="#">Account summary</a>
+				<div class="sub-menu-1">
+					<ul>
+						<li><a th:href="@{/viewbalance}">Check Balnce</a></li>
+						<li><a th:href="@{/transaction_History}">View Transactions</a></li>
+						<li><a th:href="@{/transfer}">Transfer money</a></li>
+
+
+					</ul>
+
+				</div></li>
+			<li><a href="#">Languages</a>
+				<div class="sub-menu-1">
+					<ul>
+						<li><a href="#">Telugu</a></li>
+						<li><a href="#">English</a></li>
+						<li><a href="#">Hindhi</a></li>
+
+
+					</ul>
+
+				</div></li>
+
+			<li><a href="#">services</a>
+				<div class="sub-menu-1">
+					<ul>
+						<li><a href="#">Personal Loan</a></li>
+						<li><a href="#">Car Loan</a></li>
+						<li><a href="#">Gold Loan</a></li>
+						<li><a href="#">Home Loan</a></li>
+						<li><a href="#">credit card</a></li>
+
+
+
+					</ul>
+
+				</div></li>
+			<li><a th:href="@{/logout}">logout</a></li>
+
+		</ul>
+	</div>
+	<!--  <p>
+		Your account Number Is: <span th:text="${Customer.accountnumber}"></span>
+	</p>-->
+
+	<!-- <p>
+			Your account Number Is: <span th:text="${accountNumber}"></span>
+		</p> 
+	<h4>
+		<a th:href="@{/logout}">Click here to Logout</a>
+	</h4>-->
+	<!--  <a th:href="@{menupage}">click</a>-->
+
+
+
+</body>
+</html>

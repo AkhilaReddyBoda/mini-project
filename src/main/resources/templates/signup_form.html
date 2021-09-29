@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration - Akhila Bank</title>
+<link rel="stylesheet" type="text/css" href="astrich.css" />
+<link rel="stylesheet" type="text/css"
+	href="/webjars/bootstrap/css/bootstrap.min.css" />
+<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+<script type="text/javascript"
+	src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container text-center">
+		<div>
+			<h1>Bank Account Registration</h1>
+		</div>
+		<form th:action="@{/process_register}" th:object="${customer}"
+			method="post" style="max-width: 600px; margin: 0 auto;">
+			<div class="m-3">
+              <div class="required-field">Customer Name</div>
+
+				<div class="form-group row">
+					<label class="col-4 col-form-label"></label>
+					<div class="col-8">
+						<input type="text" th:field="*{cust_name}" class="form-control"
+							required minlength="2" maxlength="20" />
+					</div>
+				</div>
+<div class="required-field">E-mail:</div>
+				<div class="form-group row">
+					<label class="col-4 col-form-label"></label>
+					<div class="col-8">
+						<input type="email" th:field="*{email}" class="form-control"
+							required />
+					</div>
+				</div>
+<div class="required-field">PanCard:</div>
+				<div class="form-group row">
+					<label class="col-4 col-form-label"></label>
+					<div class="col-8">
+						<input type="text" th:field="*{pan_number}" class="form-control"
+							required minlength="6" maxlength="10" />
+					</div>
+				</div>
+<div class="required-field">Mobile:</div>
+				<div class="form-group row">
+					<label class="col-4 col-form-label"></label>
+					<div class="col-8">
+						<input type="text" th:field="*{mobile}" class="form-control"
+							required minlength="6" maxlength="10" />
+					</div>
+				</div>
+<div class="required-field">Adhaar:</div>
+				<div class="form-group row">
+					<label class="col-4 col-form-label"></label>
+					<div class="col-8">
+						<input type="text" th:field="*{adhaar}" class="form-control"
+							required minlength="6" maxlength="12" />
+					</div>
+				</div>
+				<div class="required-field">DOB: </div>
+				<div class="form-group row">
+					<label class="col-4 col-form-label"></label>
+					<div class="col-8">
+						<input type="date" th:field="*{dob}" id="datepicker"
+							class="form-control" />
+					</div>
+				</div>
+<div class="required-field">Account Type: </div>
+				<div class="form-group row">
+					<label class="col-4 col-form-label"></label>
+					<div class="col-8">
+						<select th:field="*{account_type}" class="form-control">
+							<option th:value="'Saving Account'" th:text="Saving_Account"></option>
+							<option th:value="'Current Account'" th:text="Current_Account"></option>
+						</select>
+					</div>
+
+
+
+				</div>
+				<div>
+					<button type="submit" class="btn btn-primary">Register</button>
+					<h3>
+						<a th:href="@{/}">Or Goto home</a>
+					</h3>
+				</div>
+		</form>
+	</div>
+</body>
+</html>

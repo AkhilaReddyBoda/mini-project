@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Akhila Bank</title>
+<link rel="stylesheet" type="text/css" href="profile.css" />
+</head>
+<body>
+<body style="background: url(image/bank.jpg)">
+<!--  <div class="container">
+    <h1>Edit Profile</h1>
+  	<hr>
+	<div class="row">-->
+      <!-- left column -->
+     <!--  <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+      </div>
+     <!--   <div align="center">-->
+      <div class="col-md-9 personal-info">
+        <h3>Personal info</h3>
+        
+       <!--  <p>
+			Your account Number Is: <span th:text="${Customer.accountnumber}"></span>
+		</p> -->
+       
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label class="col-lg-3 control-label">Name:</label>
+			<div class="col-lg-8">
+				<input class="form-control" type="text" th:value="${Customer.cust_name}"disabled>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-lg-3 control-label">DOB:</label>
+			<div class="col-lg-8">
+				<input class="form-control" type="text" th:value="${Customer.dob}">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-lg-3 control-label">Mobile_no:</label>
+			<div class="col-lg-8">
+				<input class="form-control" type="text" th:value="${Customer.mobile}">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-lg-3 control-label">Email:</label>
+			<div class="col-lg-8">
+				<input class="form-control" type="text" th:value="${Customer.email}">
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-lg-3 control-label">PAN_NO:</label>
+			<div class="col-lg-8">
+			<input class="form-control" type="text" th:value="${Customer.pan_number}"disabled>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-lg-3 control-label">Adhaar_no:</label>
+			<div class="col-lg-8">
+				<input class="form-control" type="text" th:value="${Customer.adhaar}"disabled>
+			</div>
+		</div>
+		<br>
+		<h3>Account Info:</h3>
+		<div class="form-group">
+			<label class="col-lg-3 control-label">Account_Number:</label>
+			<div class="col-lg-8">
+				<input class="form-control" type="text" th:value="${Customer.accountnumber}"disabled>
+			</div>
+		</div>
+		
+		<div class="form-group">
+			<label class="col-lg-3 control-label">IFSC_Code:</label>
+			<div class="col-lg-8">
+				<input class="form-control" type="text" th:value="${Customer.ifsc_code}"disabled>
+			</div>
+		</div>
+		
+		<br>
+		
+		  <button type="submit" class="btn btn-primary"><a th:href="@{home}">Back</a></button>
+		 
+		<button type="button" class="btn btn-primary">update</button>
+		<button type="reset" class="btn btn-light">Cancel</button>
+		</div>
+</body>
+</html>
